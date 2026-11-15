@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090609">
+<title>For Janvi ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090609;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+    radial-gradient(circle at 15% 20%, rgba(170,20,80,.16), transparent 35%),
+    radial-gradient(circle at 85% 75%, rgba(110,15,65,.17), transparent 35%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    background: rgba(10,5,9,.8);
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #ff8bb5;
+    text-shadow: 0 0 15px #ff559855;
+}
+
+.nav-text {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.small-heading {
+    color: #ff9cbd;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(75px, 13vw, 145px);
+    font-weight: 400;
+    color: #ff9cbd;
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #b92d61; }
+    to { text-shadow: 0 0 35px #ff5598, 0 0 65px #9e174c; }
+}
+
+.hero p {
+    color: #c4b6bd;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.heart {
+    color: #ff609c;
+    font-size: 35px;
+    margin-top: 30px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.25); }
+}
+
+.scroll {
+    position: absolute;
+    bottom: 30px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+/* SECTION HEADINGS */
+
+section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 45px);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #a99ba2;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.photo-card {
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(255,130,175,.2);
+    background: #1b1118;
+    box-shadow: 0 15px 40px #0008;
+    transition: .4s;
+}
+
+.photo-card:hover {
+    transform: translateY(-7px);
+    border-color: #ff8fb7;
+    box-shadow: 0 15px 45px #ff4b8a30;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-card span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px;
+    background: linear-gradient(transparent, #000d);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+/* LETTER */
+
+.letter-section {
+    max-width: 850px;
+    margin: auto;
+}
+
+.letter {
+    background: linear-gradient(145deg, #1c1019, #110b10);
+    border: 1px solid rgba(255,130,175,.2);
+    padding: clamp(25px, 6vw, 55px);
+    border-radius: 18px;
+    box-shadow: 0 20px 70px #0008;
+}
+
+.letter h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #ff8fb7;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.letter p {
+    color: #d0c3ca;
+    font-size: 14px;
+    line-height: 2.1;
+    margin-bottom: 18px;
+}
+
+.letter .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #ff8fb7;
+    margin-top: 25px;
+}
+
+/* SURPRISE */
+
+.surprise {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.surprise h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.surprise p {
+    color: #b9aab2;
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+button {
+    padding: 15px 32px;
+    border: 1px solid #ff8fb7;
+    background: transparent;
+    color: #ff9cbd;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #ff8fb7;
+    color: #160a10;
+    box-shadow: 0 0 30px #ff64a059;
+    transform: scale(1.04);
+}
+
+#surpriseMessage {
+    display: none;
+    max-width: 600px;
+    margin: 35px auto 0;
+    color: #ffb2cd;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    line-height: 1.8;
+    animation: appear .8s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* CLOCK */
+
+.clock {
+    text-align: center;
+    color: #8d7b85;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 30px 0;
+}
+
+#time {
+    margin-top: 10px;
+    color: #ff9cbd;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff609c;
+    pointer-events: none;
+    z-index: 10;
+    animation: floatUp 6s linear forwards;
+    text-shadow: 0 0 12px #ff509655;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #796a73;
+    font-size: 11px;
+    border-top: 1px solid #ffffff12;
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: #ff8fb7;
+}
+
+::selection {
+    background: #ff8fb7;
+    color: #090609;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+    nav {
+        padding: 18px 6%;
+    }
+
+    .nav-text {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card {
+        height: 390px;
+    }
+
+    .letter p {
+        font-size: 13px;
+    }
+
+    .letter h3 {
+        font-size: 42px;
+    }
+
+    .surprise h2 {
+        font-size: 29px;
+    }
+
+    #surpriseMessage {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">For Janvi ♡</div>
+    <div class="nav-text">A little piece of my heart</div>
+</nav>
+
+<header class="hero">
+    <div class="small-heading">A WEBSITE MADE WITH LOVE</div>
+    <h1>Janvi</h1>
+    <p>Some people make life feel a little more beautiful.</p>
+    <div class="heart">♥</div>
+    <div class="scroll">SCROLL DOWN ↓</div>
+</header>
+
+<section class="gallery-section">
+
+    <h2 class="section-title">My Favourite Memories</h2>
+    <p class="section-subtitle">FOUR PICTURES, A MILLION FEELINGS</p>
+
+    <div class="gallery">
+
+        <div class="photo-card">
+            <img src="images/1.jpg" alt="Janvi photo 1">
+            <span>Your beautiful smile ♡</span>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/2.jpg" alt="Janvi photo 2">
+            <span>A moment to remember</span>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/3.jpg" alt="Janvi photo 3">
+            <span>My favourite person</span>
+        </div>
+
+        <div class="photo-card">
+            <img src="images/4.jpg" alt="Janvi photo 4">
+            <span>Simply unforgettable</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="letter-section">
+
+    <h2 class="section-title">A Letter For You</h2>
+    <p class="section-subtitle">WORDS FROM MY HEART</p>
+
+    <div class="letter">
+
+        <h3>My dearest Janvi,</h3>
+
+        <p>
+            I don't know if words will ever be enough to explain
+            what you mean to me, but I still want to try.
+            You are someone who has a very special place in my heart.
+            Even the smallest moments with you can become memories
+            that I never want to forget.
+        </p>
+
+        <p>
+            I know we are not perfect. We have our arguments,
+            misunderstandings, and moments when things don't go
+            the way we wish they would. Sometimes, I get hurt.
+            Sometimes, a few things make me feel a little sad,
+            even when I don't express it properly.
+        </p>
+
+        <p>
+            There are moments when I wish you could understand
+            what I feel without me having to explain everything.
+            I don't expect us to be perfect, and I don't want
+            either of us to pretend that everything is always okay.
+            I just want us to understand each other a little better.
+        </p>
+
+        <p>
+            But even after those little hurts, my feelings for you
+            don't simply disappear. I still love you.
+            I still care about you. I still want to make beautiful
+            memories with you, laugh with you, support you,
+            and be there for you through the good and difficult days.
+        </p>
+
+        <p>
+            I may not always find the perfect words, and I may
+            sometimes make mistakes too. But please know that
+            you matter to me more than I can explain.
+            I don't want a perfect love story.
+            I want something real, where we both choose to
+            understand, respect, and love each other.
+        </p>
+
+        <p>
+            Thank you for being a part of my life, Janvi.
+            No matter how ordinary a day may seem,
+            you have a way of making it special.
+        </p>
+
+        <p>
+            If there's one thing I want you to remember,
+            it's this: even on the days when I feel a little hurt,
+            there's still so much love for you in my heart.
+        </p>
+
+        <p class="signature">Your Rawnit &lt;3</p>
+
+    </div>
+</section>
+
+<section class="surprise">
+
+    <h2>One Last Thing...</h2>
+    <p>There's something I want you to read.</p>
+
+    <button onclick="showSurprise()">Open My Heart ♡</button>
+
+    <div id="surpriseMessage">
+        You're not just a part of my favourite memories,
+        Janvi. You're someone I hope to create many more
+        beautiful memories with.
+
+        <br><br>
+
+        I love you. ❤️
+    </div>
+
+</section>
+
+<div class="clock">
+    <div id="date"></div>
+    <div id="time"></div>
+</div>
+
+<footer>
+    Made with <span>♥</span> and a little too much love.
+    <br><br>
+    Created by <span>Rawnit</span>
+    <br>
+    Just for Janvi ♡
+</footer>
+
+<script>
+
+function updateClock() {
+    const now = new Date();
+
+    document.getElementById("date").textContent =
+        now.toLocaleDateString("en-IN", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+    document.getElementById("time").textContent =
+        now.toLocaleTimeString("en-IN");
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+
+function showSurprise() {
+    const message = document.getElementById("surpriseMessage");
+
+    message.style.display = "block";
+
+    for (let i = 0; i < 25; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+}
+
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "floating-heart";
+    heart.textContent = Math.random() > 0.5 ? "♥" : "♡";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (14 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 1800);
+
+</script>
+
+</body>
+</html>
